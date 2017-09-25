@@ -1,0 +1,13 @@
+http://osm2world.org/
+
+1. Make sure you have java installed on your computer first!
+2. On Windows Go to Start -> Control Panel -> System -> Advanced(tab) -> Environment Variables -> System Variables -> New:
+Variable name: _JAVA_OPTIONS
+Variable value: -Xmx512M
+3. install python and repeat step 2 but edit the PATH variable and add  C:\Python27 
+3. go to http://www.openstreetmap.org and export the map section you want. (click Manually select a different area)
+4. gitbash into the OSM2World-latest-bin
+5. ./osm2world.sh -i map.osm -o map.obj 
+
+convert obj to json
+python conversion.py -i map.obj -o map.js
